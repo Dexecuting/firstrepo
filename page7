@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/css.style">
+    </head>
+    <body>
+        <a href="page1">Home</a> | <a href="page2">Tables</a> | <a href="page3">Chairs</a> | <a href="page4">Stools</a> | <a href="page5">Sofas</a> | <a href="page6">Desks</a> | <a href="page7">Benches</a>
+<h1>BENCHES</h1> 
+<img src="images/bench.jpeg"
+width="20%"/>
+    </body>
+</html>
