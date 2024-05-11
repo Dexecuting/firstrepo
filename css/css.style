@@ -1,9 +1,10 @@
 body{
-    background-color:gray
+    background-color:gray;
 }
 h1{
     text-align: center;
     color: rgb(rgb(255, 0, 0), green, blue);
     text-transform: uppercase;
     text-decoration: unederline;
+    font-family: arial;
 }
