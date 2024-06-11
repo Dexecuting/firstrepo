@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+<?php include_once ("includes/db_connect.php");?>
     <h1>Forms</h1>
     <form actions="">
         <label for="Fn">Fullname:</label><br>
