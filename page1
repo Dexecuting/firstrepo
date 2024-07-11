@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="css/css.style">
     </head>
     <body>
-            <a href="page1">Home</a> | <a href="page2">Tables</a> | <a href="page3">Chairs</a> | <a href="page4">Stools</a> | <a href="page5">Sofas</a> | <a href="page6">Desks</a> | <a href="page7">Benches</a>
+        <a href="page1">Home</a> | <a href="page2">Tables</a> | <a href="page3">Chairs</a> | <a href="page4">Stools</a> | <a href="page5">Sofas</a> | <a href="page6">Desks</a> | <a href="page7">Benches</a>
+ 
         <h1>All things furniture</h1>
         <p>All things furniture is one of the upcoming furniture retailer firms where we sell quality furniture which are long lasting and beautiful.</p>
         <p>Get to see some of our furniture during your exploration of our website</p>

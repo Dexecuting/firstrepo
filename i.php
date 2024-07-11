@@ -17,14 +17,34 @@
     </style>
 </head>
 <body>
-<?php include_once ("includes/db_connect.php");?>
+<?php 
+include_once ("includes/db_connect.php");
+if(isset($_POST["save_details"])){
+$Fullname  = mysqli_real_escape_string($conn, $_POST["fullname"]);
+$Age = mysqli_real_escape_string($conn, $_POST["age"]);
+$Pass  = mysqli_real_escape_string($conn,  $_POST["thibitisho"]);
+$email   = mysqli_real_escape_string($conn, $_POST["email_address"]);
+$Difficulty  = mysqli_real_escape_string($conn, $_POST["level"]);
+$Subject_choice  = mysqli_real_escape_string($conn, $_POST["Choice"]);
+
+$insert_message= "INSERT INTO messages (sender_name, sender_age, sender_pass, sender_email, sender_level,sender_subject, sender_text)
+VALUES('$Fullname', '$Age', '$Pass',  '$Email_Address', '$Difficulty', '$Subject_choice' )";
+
+if($conn->query($insert_message) === TRUE) {
+    header ("Location: i.php");
+    exit();
+} else {
+    echo "Error: " . $insert_message . "<br>" . $conn->error;
+}
+}
+?>
     <h1>Forms</h1>
-    <form actions="">
+    <form actions="<?php print htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
         <label for="Fn">Fullname:</label><br>
-        <input type="text"  placeholder="Fullname"><br><br>
-        <input type="number"placeholder="Age"><br><br>
-        <input type="password" placeholder="Pass"><br><br>
-        <input type="email" placeholder="Email Address"><br><br>
+        <input type="text" name="fullname" placeholder="Fullname" required > <br><br>
+        <input type="number" name="nambari"placeholder="Age" required ><br><br>
+        <input type="password" name="thibitisho" placeholder="Pass" required ><br><br>
+        <input type="email" name="email_address" placeholder="Email Address" required ><br><br>
         <input type="colour" placeholder=""><br><br>
         <input type="range" placeholder=""><br><br>
 
@@ -46,8 +66,8 @@
 <label for="Spanish">Spanish</label><br>
 
 <label for="sb">Subject</label><br>
-<select name="" id="sb">
-    <option value=""---Select  Subject-</option>
+<select name="subject_line" id="sb">
+    <option value=""--->Select  Subject- </option>
     <option value="1">Email Support<option>
     <option value="2">e-learning support<option>
     <option value="3">AMS support<option>
@@ -56,7 +76,7 @@
 
     
 
-<select name=""  id="">
+<select name="gender_line"  id="">
     <option value="">----Select Gender-</option>
     <option value="1">Female</option>
     <option value="1">Male</option>
